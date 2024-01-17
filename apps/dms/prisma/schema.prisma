@@ -20,7 +20,7 @@ model User {
 
 model Device {
   createdAt  DateTime @default(now())
-  deviceId   String?
+  deviceId   String?  @unique
   deviceName String?
   events     Event[]
   id         String   @id @default(cuid())
